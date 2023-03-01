@@ -1,0 +1,154 @@
+/*HEADER*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: rgba(7, 7, 7, 0.582) ;
+  box-shadow: 0 2px 4px #a8a5a5d3;
+  padding: 0 20px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 21px;
+  color: #c9c1c1bd;
+}
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color:rgba(255, 254, 254, 0.829)
+  
+}
+
+.nav-datos{
+  position: absolute;
+  transform: translate(-120px, -13px);
+  cursor: pointer;
+
+}
+
+.nav-inicio{
+  position: absolute;
+  transform: translate(-120px, -20px);
+  cursor: pointer;
+
+}
+
+
+.nav-link{
+  color: #c9c1c1bd;
+}
+
+.navbar {
+  margin-top: 50px; 
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.historial-container {
+  background-color: #2b2727;
+  padding: 15px;
+  border: 2px solid #2b2727;
+  font-family: 'Roboto Slab', serif;
+  color: #b79357;
+  text-align: center;
+  border-radius: 7px #2b2727;
+  box-shadow: 0 0 4px ;
+  width: 200px;
+  height: 18px;
+  transform: translate(1205px, -300px);
+  
+}
+
+.Timer {
+  color: #b79357;
+  text-align: center;
+  width: 200px;
+  height: 18px;
+  transform: translate(1245px, -330px);
+  
+}
+
+
+/* IMAGENC */
+.image-container {
+  position: relative;
+  height: 200px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.my-image {
+  position: absolute;
+  transform: translate(1000px, 20px);
+  width: 200px;
+  height: 300px;
+}
+
+.my-logo {
+  position: absolute;
+  transform: translate(0px, -49px);
+  width: 400px;
+  height: 99px;
+}
+/* FOOTER */
+
+#footer {
+  background-color: #c9c1c1bd;
+  align-self: flex-end;
+  height: 200px;
+  font-family: 'Roboto Slab', serif;
+  line-height: 1.5;
+  text-align: center;
+
+
+}
+
+.main-content{
+  font-family: 'Roboto Slab', serif;
+  font-size: 15px;
+  line-height: 2.5;
+
+}
+
+.container{
+  display:flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.prueba{
+  display: flex;
+  flex-direction: column;
+}
+
+/* ROSTRO */
+
+.Rostro {
+  position: absolute;
+  transform: translate(885px, -119px);
+  width: 220px;
+  height: 220px;
+}
+
+
+/* DATOS */
+
+.datos-container {
+  background-color: #c9c1c1bd;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #ccc;
+  width: 500px;
+  height: 400px;
+  transform: translate(50px, 50px);
+  font-family: 'Roboto Slab', serif;
+}
+
