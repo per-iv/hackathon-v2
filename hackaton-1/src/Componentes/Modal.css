@@ -20,9 +20,14 @@ body.active-modal {
     position: fixed;
 }
 
+:root {
+    --overlay-color: red;
+  }
+
 .overlay {
-    background: rgba(186, 27, 27, 0.8);
-}
+    background: var(--overlay-color);
+    opacity: 0.5;
+  }
 .modal-content {
     position: absolute;
     top: 40%;

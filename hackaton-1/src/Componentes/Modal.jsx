@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Modal.css";
 
 export default function Modal() {
@@ -13,7 +13,20 @@ export default function Modal() {
   } else {
     document.body.classList.remove('active-modal')
   }
+  
+  const [overlayColor, setOverlayColor] = useState('red');
 
+  useEffect(() => {
+    let interval;
+
+    if (modal) {
+      interval = setInterval(() => {
+        setOverlayColor(overlayColor === 'red' ? 'white' : 'red');
+      }, 500);
+    }
+
+    return () => clearInterval(interval);
+  }, [modal, overlayColor]);
 
   return (
     <>
@@ -23,7 +36,7 @@ export default function Modal() {
 
       {modal && (
         <div className="modal">
-          <div onClick={toggleModal} className="overlay"></div>
+          <div onClick={toggleModal} className="overlay" style={{ '--overlay-color': overlayColor }}></div>
           <div className="modal-content">
             <h2>¡SE DETECTO UN ARMA!</h2>
             <p>
