@@ -3,7 +3,7 @@ import ImagenC from "../Componentes/ImagenC";
 import Footer from "../Componentes/Footer";
 import Rostro from "../Componentes/Rostro";
 import Historial from "../Componentes/Historial";
-
+import Modal from "../Componentes/Modal";
 
 function Home() {
   return (
@@ -11,6 +11,7 @@ function Home() {
       <div className="container">
         <Header pagina="Inicio" />
         <ImagenC />
+        <Modal />
         <Rostro/>
       </div>
       <Historial/>
