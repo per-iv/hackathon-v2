@@ -33,24 +33,42 @@ body.active-modal {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    line-height: 1.4;
+    line-height: 1.8;
     background: #f1f1f1;
-    padding: 50px 28px;
+    padding: 80px 28px;
     border-radius: 9px;
     max-width: 600px;
     min-width: 300px;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Montserrat', sans-serif;
+   
+ 
+}
+
+h2 {
+    margin-top: -8%;
+
 }
 
 .close-modal {
     position: absolute;
-    top: 160px;
-    right: 100px;
+    top: 155px;
+    right: 185px;
     padding: 5px 7px;
+    align-items: center;
+    background-color:#5dc460 ;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 .report-modal {
+    display: flex;
     position: absolute;
-    top: 160px;
-    right: 200px;
+    top: 155px;
+    right: 285px;
     padding: 5px 7px;
+    background-color: #EF5350;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
