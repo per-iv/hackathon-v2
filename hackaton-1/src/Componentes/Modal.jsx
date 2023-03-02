@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Modal.css";
 
+
 export default function Modal() {
+
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
@@ -14,6 +16,21 @@ export default function Modal() {
     document.body.classList.remove('active-modal')
   }
   
+  const [count, setCount] = useState(5);
+
+  useEffect(() => {
+    let timer;
+  
+    if (modal && count > 0) {
+      timer = setInterval(() => setCount(prevCount => prevCount - 1), 1000);
+    } else if (modal == 0) {
+      setCount(5);
+    }
+  
+    return () => clearInterval(timer);
+  }, [modal, count]);
+
+
   const [overlayColor, setOverlayColor] = useState('red');
 
   useEffect(() => {
@@ -25,8 +42,24 @@ export default function Modal() {
       }, 500);
     }
 
+    
+
     return () => clearInterval(interval);
   }, [modal, overlayColor]);
+
+
+  const [mostrar, setMostrar] = useState('hidden');
+  useEffect(() => {
+  if(count==0){
+    setMostrar('visible');
+  }
+
+  if (modal == 0) {
+    setMostrar('hidden');
+  }
+
+
+}, [count, mostrar]);
 
   return (
     <>
@@ -37,6 +70,7 @@ export default function Modal() {
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay" style={{ '--overlay-color': overlayColor }}></div>
+          
           <div className="modal-content">
             <h2>¡SE DETECTO UN ARMA!</h2>
             <p>
@@ -48,6 +82,12 @@ export default function Modal() {
             <button className="report-modal" onClick={toggleModal}>
               REPORTAR A LA POLICIA
               </button>
+            <button className="timer-modal">  
+            Tiempo restante: {count}
+            </button>
+            <button  className="policia-modal" style={{ '--mostrar': mostrar }}>
+              SE CONTACTO A LA POLICIA, ¡VAN EN CAMINO!
+            </button>
           </div>
         </div>
       )}
